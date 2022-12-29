@@ -45,7 +45,6 @@ $(".c-info__more").click(function () {
     .find(".c-info__overlay")
     .removeClass("c-info__overlay--flex");
   $(this).next().addClass("c-info__overlay--flex");
-  console.log("dfgkldkj");
 });
 
 // MOBILE MENU
@@ -84,7 +83,6 @@ menuBtnSp.addEventListener("click", function () {
 // click vào nav button menu để ẩn menu bar
 navLinks.forEach(function (navLink) {
   navLink.addEventListener("click", function () {
-    console.log("dfjgidg");
     menuBar.classList.toggle("is-tabandspnotvisible");
     mobileMenuHandler();
   });

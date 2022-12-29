@@ -153,7 +153,7 @@
 
 .c-banner__label {
     font-size: 2.4rem;
-    padding: 10px 28px 9px 40px;
+    padding: 10px 42px 9px 40px;
     background: #25a989;
     border-radius: 27.5px;
     display: inline-block;
@@ -161,10 +161,10 @@
     margin-left: -20px;
     letter-spacing: 5.9px;
     transform: translateY(-1px);
+    font-feature-settings: "palt";
 
     .c-banner__label--pp {
-        transform: translate(-6px, 0);
-        display: inline-block;
+        margin-left: -9px;
     }
 
     &:hover {
@@ -217,8 +217,9 @@
     height: 480px;
     position: absolute;
     top: 130px;
-    left: 0;
     pointer-events: none;
+    left: 50%;
+    max-width: 1920px;
     @include tab {
         top: 60px;
     }

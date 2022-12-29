@@ -30,9 +30,9 @@
 .is-aligned {
     padding: 0 0 5px 9px;
     letter-spacing: 1.5px;
-    border-bottom: 1px dotted #333;
+    border-bottom: 1px dashed #333;
     @include sp {
-        // padding: 0;
+        border-bottom: 1px dotted #333;
     }
 }
 
@@ -111,21 +111,21 @@
 
 @keyframes isshown {
     0% {
-        transform: translateY(-100%);
+        transform: translate(-50%, -100%);
     }
 
     100% {
-        transform: translateY(0%);
+        transform: translate(-50%, 0%);
     }
 }
 
 @keyframes ishidden {
     0% {
-        transform: translateY(0%);
+        transform: translate(-50%, 0);
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translate(-50%, -100%);
     }
 }
 

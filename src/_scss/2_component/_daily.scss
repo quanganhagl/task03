@@ -142,6 +142,7 @@
         left: 50px;
         @media only screen and (max-width: 1200px) {
             max-width: 150px;
+            left: 53px;
             @include tab {
                 letter-spacing: 1.9px;
                 max-width: unset;
@@ -177,6 +178,7 @@
         padding: 1px 0 4px 16px;
         @media only screen and (max-width: 1200px) {
             max-width: 150px;
+            left: 80px;
             @include tab {
                 top: 49px;
                 left: 80px;
@@ -252,6 +254,7 @@
         left: 50px;
         @media only screen and (max-width: 1200px) {
             max-width: 130px;
+            left: 55px;
             @include tab {
                 top: 25px;
                 left: 38px;
