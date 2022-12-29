@@ -1,0 +1,73 @@
+<%- include('_layouts/layout', { title: 'Home page' }); -%>
+
+<!-- @meta -->
+<meta name="description" content="Home page" />
+<meta name="keywords" content="">
+<!-- @@meta -->
+
+<!-- @content -->
+<main class="p-home">
+  <div class="p-home__content">
+    <!-- BANNER -->
+    <!-- *********************************** -->
+    <%- include('_partials/banner'); -%>
+
+    <!-- DAILY USE -->
+    <!-- *********************************** -->
+    <%- include('_partials/daily'); -%>
+
+    <!-- INFO -->
+    <!-- *********************************** -->
+    <%- include('_partials/info'); -%>
+
+    <!-- Q&A -->
+    <!-- *********************************** -->
+    <%- include('_partials/qa'); -%>
+
+    <!-- COLUMN -->
+    <!-- *********************************** -->
+    <%- include('_partials/column'); -%>
+  </div>
+  <!-- animation-->
+  <!-- Leaf -->
+  <div class="c-banner__leaves">
+    <picture>
+      <source
+        media="(max-width: 1023px)"
+        srcset="./assets/img/animation/leaf_top_mobile.png"
+      />
+      <img
+        class="c-banner__leaftop u-fixed is-notindented--top u-scalehalf"
+        src="./assets/img/animation/leaf_top.png"
+        alt="leaf top"
+      />
+    </picture>
+
+    <picture>
+      <source
+        media="(max-width: 1023px)"
+        srcset="./assets/img/animation/leaf_right_mobile.png"
+      />
+      <img
+        class="c-banner__leafright u-fixed is-notindented--right u-scalehalf"
+        src="./assets/img/animation/leaf_right.png"
+        alt="leaf right"
+      />
+    </picture>
+  </div>
+  <!-- Bubble -->
+  <div class="c-banner__drops is-shown is-pconly">
+    <% for (let i = 1; i<=6; i++) { %>
+    <img
+      class="c-banner__drop c-banner__drop<%= i %> u-absolute u-originalscaled<% if (i % 2 == 0) { %> u-downup <% } else { %> u-updown <% } %>"
+      src="<%= animation.drops[i-1].src %>"
+      alt="<%= animation.drops[i-1].alt %>"
+    />
+    <% } %>
+  </div>
+</main>
+<!-- @@content -->
+
+<!-- @script -->
+<script></script>
+<!-- @@script -->
