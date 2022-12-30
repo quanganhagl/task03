@@ -4,37 +4,39 @@
   <div class="c-daily__uses">
     <% if (typeof dailyItems != 'undefined') { %> <%
     dailyItems.forEach(dailyItem => { %>
-    <div class="c-daily__use c-daily__use<%= dailyItem.id %>">
-      <picture>
-        <source
-          media="(max-width: 767px)"
-          srcset="<%= dailyItem.urlmobile %>"
-        />
-        <img
-          class="c-daily__useimg u-scalehalf"
-          src="<%= dailyItem.url %>"
-          alt="<%= dailyItem.title %>"
-        />
-      </picture>
-      <label
-        class="c-daily__label c-daily__label<%= dailyItem.id %> u-black333text is-aligned"
-      >
-        <%= dailyItem.title %></label
-      >
-      <% if (dailyItem.recommend) { %>
-      <picture>
-        <source
-          media="(max-width: 767px)"
-          srcset="<%= dailyItem.recommendmobile %>"
-        />
-        <img
-          class="c-daily__recommend c-daily__recommend<%= dailyItem.id %> u-absolute u-scalehalf"
-          src="<%= dailyItem.recommend %>"
-          alt="<%= dailyItem.title %>"
-        />
-      </picture>
-      <% } %>
-    </div>
+    <a href="#">
+      <div class="c-daily__use c-daily__use<%= dailyItem.id %>">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="<%= dailyItem.urlmobile %>"
+          />
+          <img
+            class="c-daily__useimg u-scalehalf"
+            src="<%= dailyItem.url %>"
+            alt="<%= dailyItem.title %>"
+          />
+        </picture>
+        <label
+          class="c-daily__label c-daily__label<%= dailyItem.id %> u-black333text is-aligned"
+        >
+          <%= dailyItem.title %></label
+        >
+        <% if (dailyItem.recommend) { %>
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="<%= dailyItem.recommendmobile %>"
+          />
+          <img
+            class="c-daily__recommend c-daily__recommend<%= dailyItem.id %> u-absolute u-scalehalf"
+            src="<%= dailyItem.recommend %>"
+            alt="<%= dailyItem.title %>"
+          />
+        </picture>
+        <% } %>
+      </div>
+    </a>
     <% }) %> <% } %>
   </div>
 </section>

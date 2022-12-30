@@ -25,6 +25,10 @@
         align-items: center;
         justify-items: end;
 
+        &:hover {
+            @include hover-effect;
+        }
+
         &:nth-child(10) {
             .c-column__arrow {
                 margin-top: 437%;
@@ -32,8 +36,6 @@
         }
 
         @include sp {
-            padding-bottom: 7px;
-
             border-bottom: none;
             display: block;
 
@@ -52,10 +54,6 @@
             }
 
             &:not(:first-child) {
-                .c-column__headerimg {
-                    margin-top: 4px;
-                }
-
                 .c-column__headerheadingh3 {
                     line-height: 1.7;
                     margin-top: 6px;
@@ -99,8 +97,16 @@
     .c-column__seemore {
         font-size: 1.3rem;
         color: #176b6a;
-        font-family: "Kozuka Gothic Pr6N", serif;
-        text-decoration: underline 1px solid #176b6a;
+        font-family: $secondary-fonts;
+        text-decoration-line: underline;
+        -webkit-text-decoration-thickness: 1px;
+        text-decoration-style: solid;
+        text-decoration-color: #176b6a;
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-style: solid;
+        text-decoration-color: #176b6a;
+
         text-underline-offset: 3px;
         display: none;
         @include sp {
@@ -220,11 +226,12 @@
         background-color: #176b6a;
         justify-content: center;
         align-items: center;
-        border-radius: 7.5px;
+        border-radius: 8px;
         height: 20px;
         @include sp {
             display: flex !important;
             align-items: center;
+            transform: translateY(-8px);
         }
     }
 

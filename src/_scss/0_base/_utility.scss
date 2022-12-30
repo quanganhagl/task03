@@ -59,11 +59,11 @@
 }
 
 .u-backgroundgreen {
-    background-color: #1f4242;
+    background-color: #1f4242 !important;
 }
 
 .u-backgroundwhite {
-    background-color: #fff;
+    background-color: #fff !important;
 }
 
 //============================================
@@ -111,21 +111,21 @@
 
 @keyframes isshown {
     0% {
-        transform: translate(-50%, -100%);
+        transform: translateY(-150%);
     }
 
     100% {
-        transform: translate(-50%, 0%);
+        transform: translateY(0%);
     }
 }
 
 @keyframes ishidden {
     0% {
-        transform: translate(-50%, 0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translate(-50%, -100%);
+        transform: translateY(-150%);
     }
 }
 
@@ -170,27 +170,27 @@
 }
 
 .is-shown {
-    animation: 0.5s ease-in 0s 1 forwards isshown;
+    animation: 1.7s ease-in-out 0s 1 forwards isshown;
 }
 
 .is-hidden {
-    animation: 0.5s ease-in 0s 1 forwards ishidden;
+    animation: 1s ease-in-out 0.3s 1 forwards ishidden;
 }
 
 .is-notindented--top {
-    animation: 0.5s ease-in 0s 1 forwards isnotindentedtop;
+    animation: 0.7s ease-in-out 0s 1 forwards isnotindentedtop;
 }
 
 .is-notindented--right {
-    animation: 0.5s ease-in 0s 1 forwards isnotindentedright;
+    animation: 0.7s ease-in-out 0s 1 forwards isnotindentedright;
 }
 
 .is-indented--top {
-    animation: 0.5s ease-in 0s 1 forwards isindentedtop;
+    animation: 0.7s ease-in-out 0s 1 forwards isindentedtop;
 }
 
 .is-indented--right {
-    animation: 0.5s ease-in 0s 1 forwards isindentedright;
+    animation: 0.7s ease-in-out 0s 1 forwards isindentedright;
 }
 
 //============================================

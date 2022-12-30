@@ -1,4 +1,6 @@
 let website = document.querySelector("html");
+let body = document.querySelector("body");
+
 let drops = document.querySelector(".c-banner__drops");
 let leafTop = document.querySelector(".c-banner__leaftop");
 let leafRight = document.querySelector(".c-banner__leafright");
@@ -7,7 +9,7 @@ let leafRightMobile = document.querySelector(".c-header__leafrightmenu");
 
 // scroll ẩn hiện bubble và leaf
 document.addEventListener("scroll", (e) => {
-  if (website.scrollTop <= 100) {
+  if (website.scrollTop <= 1) {
     drops.classList.remove("is-hidden");
 
     leafTop.classList.remove("is-indented--top");
@@ -78,6 +80,8 @@ function mobileMenuHandler() {
 // click vào menu button để ẩn hiện menu bar
 menuBtnSp.addEventListener("click", function () {
   menuBar.classList.toggle("is-tabandspnotvisible");
+  body.classList.toggle("u-fixed");
+  body.style.top = "0px"
   mobileMenuHandler();
 });
 // click vào nav button menu để ẩn menu bar
@@ -91,7 +95,7 @@ navLinks.forEach(function (navLink) {
 //click arrow down to display / hide column description
 $(".c-column__sparrowblock").click(function () {
   $(this)
-    .parent()
+    .prev()
     .children(".c-column__article")
     .children(".c-column__description")
     .toggleClass("is-sphidden");

@@ -38,16 +38,23 @@
         <div class="c-info__images c-info__image<%= pointNumber.id %>">
           <% pointNumber.pointImages.forEach(pointImage => { %>
           <div class="c-info__imagecontainer">
-            <img
-              class="c-info__image"
-              src="<%= pointImage.url %>"
-              alt="<%= pointImage.title %>"
-            />
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="<%= pointImage.urlsp %>"
+              />
+              <img
+                class="c-info__image"
+                src="<%= pointImage.url %>"
+                alt="<%= pointImage.title %>"
+              />
+            </picture>
             <img
               class="c-info__more c-info__more<%= pointImage.point %>"
               src="./assets/img/point/point_more.png"
               alt="more"
             />
+
             <div class="c-info__overlay">
               <h3
                 class="c-info__overlayheading c-info__overlayheading<%= pointNumber.id %> u-greentext"
@@ -79,17 +86,20 @@
       </h2>
       <div class="c-info__brandlogos">
         <% info.brands.forEach(brand => { %>
-        <a href="#" target="_blank"
-          ><img
-            class="c-info__brandlogo"
-            src="<%= brand.url %>"
-            alt="お買い求めは全国のドラッグストア、またはこちらから"
-        /></a>
+        <a href="#" target="_blank">
+          <picture>
+            <source media="(max-width: 767px)" srcset="<%= brand.urlsp %>" />
+            <img
+              class="c-info__brandlogo"
+              src="<%= brand.url %>"
+              alt="お買い求めは全国のドラッグストア、またはこちらから"
+            /> </picture
+        ></a>
 
         <%}) %>
       </div>
       <p class="c-info__brandnote u-black333text">
-        Amazon、Amazon.co.jp、及びAmazon.co.jpロゴはAmazon.com,
+        Amazon、Amazon.co.jp、及びAmazon.co.&shy;jpロゴはAmazon.com,
         Inc.又はその関連会社の商標です。
       </p>
     </div>

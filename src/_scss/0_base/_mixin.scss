@@ -33,4 +33,13 @@
 @mixin hover-effect {
     opacity: 0.7;
     cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+//============================================
+// font-family
+//============================================
+@font-face {
+    font-family: "Kozuka Gothic Pr6N";
+    src: url(./assets/font/KozGoPr6N-Regular.otf);
 }

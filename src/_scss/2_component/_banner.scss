@@ -12,11 +12,13 @@
         @include tab {
             display: unset;
             position: fixed;
-            top: 30px;
-            left: 30px;
+            top: 20px;
+            left: 20px;
             z-index: 1000;
             zoom: 75%;
             border-radius: 50px;
+            background-color: white;
+
             @include sp {
                 display: unset;
                 position: fixed;
@@ -145,9 +147,7 @@
     @include tab {
         margin-left: 0;
         font-size: 2rem;
-        @include tab {
-            letter-spacing: 0.3px;
-        }
+        letter-spacing: 0.3px;
     }
 }
 
@@ -155,7 +155,7 @@
     font-size: 2.4rem;
     padding: 10px 42px 9px 40px;
     background: #25a989;
-    border-radius: 27.5px;
+    border-radius: 28px;
     display: inline-block;
     margin-top: 20px;
     margin-left: -20px;
@@ -175,12 +175,13 @@
         font-size: 1.6rem;
 
         @include sp {
-            padding: 5px 4px 6px 25px;
+            padding: 5px 0 6px;
+            text-align: center;
             margin-top: 24px;
             letter-spacing: 4.5px;
             width: 200px;
             transform: translateX(-1px);
-            border-radius: 17.5px;
+            border-radius: 18px;
         }
     }
 }
@@ -215,10 +216,11 @@
 .c-banner__drops {
     width: 100%;
     height: 480px;
-    position: absolute;
+    position: fixed;
     top: 130px;
     pointer-events: none;
-    left: 50%;
+    left: 0;
+    right: 0;
     max-width: 1920px;
     @include tab {
         top: 60px;

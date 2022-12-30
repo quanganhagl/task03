@@ -16,36 +16,34 @@
     </h2>
     <div class="c-column__list l-container--860px">
       <% columns.forEach(column => { %>
-      <div class="c-column__articleblock">
+      <div onclick="window.location.href='#'" class="c-column__articleblock">
         <div class="c-column__article">
-          <a href="#">
-            <div class="c-column__header">
-              <picture>
-                <source
-                  media="(max-width: 767px)"
-                  srcset="./assets/img/column/column_<%= column.id %>_mobile.png"
-                />
+          <div class="c-column__header">
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./assets/img/column/column_<%= column.id %>_mobile.png"
+              />
 
-                <img
-                  class="c-column__headerimg"
-                  src="./assets/img/column/column_<%= column.id %>.jpg"
-                  alt="column.title"
-                />
-              </picture>
-              <div class="c-column__headerheading">
-                <p
-                  class="c-column__headerheadingp u-black333text u-spacing--1p4px"
-                >
-                  <%= column.titleNote %>
-                </p>
-                <h3
-                  class="c-column__headerheadingh3 c-column__title u-black333text"
-                >
-                  <%= column.title %>
-                </h3>
-              </div>
+              <img
+                class="c-column__headerimg"
+                src="./assets/img/column/column_<%= column.id %>.jpg"
+                alt="<%= column.title %>"
+              />
+            </picture>
+            <div class="c-column__headerheading">
+              <p
+                class="c-column__headerheadingp u-black333text u-spacing--1p4px"
+              >
+                <%= column.titleNote %>
+              </p>
+              <h3
+                class="c-column__headerheadingh3 c-column__title u-black333text"
+              >
+                <%= column.title %>
+              </h3>
             </div>
-          </a>
+          </div>
           <div class="c-column__description is-sphidden">
             <p class="u-black333text is-sphidden"><%= column.description %></p>
             <div class="is-sponly c-column__seemoreblock">
@@ -60,14 +58,13 @@
             alt="go-to arrow"
           />
         </div>
-
-        <div class="c-column__sparrowblock c-info__overlay--flex is-sponly">
-          <img
-            class="c-column__sparrow is-sponly u-scalehalf"
-            src="./assets/img/column/column_arrow_mobile.png"
-            alt="go-to arrow"
-          />
-        </div>
+      </div>
+      <div class="c-column__sparrowblock c-info__overlay--flex is-sponly">
+        <img
+          class="c-column__sparrow is-sponly u-scalehalf"
+          src="./assets/img/column/column_arrow_mobile.png"
+          alt="go-to arrow"
+        />
       </div>
       <% }) %>
     </div>

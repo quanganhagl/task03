@@ -1,6 +1,7 @@
 .c-info {
     padding-top: 99px;
-    background-color: #f6f5ef;
+
+    background: url(../../assets/img/bgbeige.jpg) repeat center / auto;
     padding-left: 30px;
     padding-right: 30px;
     @include sp {
@@ -34,16 +35,6 @@
             &:nth-child(2) {
                 .c-info__smallheading--aligned {
                     display: block !important;
-                }
-            }
-
-            &:nth-child(3) {
-                .c-info__imagecontainer {
-                    &:nth-child(1) {
-                        .c-info__image {
-                            content: url(./assets/img/point/point_3/point_31_mobile.jpg);
-                        }
-                    }
                 }
             }
 
@@ -106,6 +97,8 @@
     .c-info__image {
         border-radius: 30px;
         @include sp {
+            max-width: 330px;
+            width: 100%;
             border-radius: 15px;
         }
     }
@@ -118,14 +111,16 @@
 
     .c-info__more {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
+        bottom: 6.3%;
+        right: 6.2%;
+        @include sp {
+            bottom: 5%;
+            right: 5%;
+            zoom: 71.7%;
+        }
 
         &:hover {
             @include hover-effect;
-        }
-        @include sp {
-            zoom: 73%;
         }
     }
 
@@ -202,7 +197,7 @@
     .c-info__overlay {
         position: absolute;
         border-radius: 26px;
-        background-color: rgba(254, 254, 254, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
         padding: 6% 7.6% 7.6%;
         top: 6%;
         left: 6%;
@@ -381,10 +376,10 @@
         text-align: center;
         letter-spacing: 1.4px;
         @include sp {
+            letter-spacing: 1.3px;
             margin-top: 20px;
             font-size: 1.3rem;
             color: #000;
-            letter-spacing: 1.2px;
             line-height: 1.66;
         }
     }
